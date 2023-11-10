@@ -48,7 +48,7 @@ See <https://kit.svelte.dev/docs/single-page-apps> for more information.
 - `pnpm dev`: Start the development server.
 - `pnpm build`: Build the app for production.
 - `pnpm preview`: Preview the production build.
-- `pnpm check`: Synchronise SveleKit generated type definitions and get Svelte diagnostics.
+- `pnpm check`: Synchronise SvelteKit-generated type definitions and get Svelte diagnostics.
 - `pnpm check:watch`: Same as `pnpm check` but watch for changes.
 - `pnpm db:sync-schema`: Run Prisma migrate dev to sync the database schema.
 - `pnpm db:generate-assets`: Generate Prisma assets.
