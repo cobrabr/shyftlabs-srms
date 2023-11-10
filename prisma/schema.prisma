@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Course {
+  id      Int      @id @default(autoincrement())
+  name    String
+  results Result[]
+
+  @@index([name])
+  @@map("course")
+}
+
+model Result {
+  courseId  Int     @map("course_id")
+  studentId Int     @map("student_id")
+  score     String
+  course    Course  @relation(fields: [courseId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([courseId, studentId])
+  @@map("result")
+}
+
+model Student {
+  id          Int      @id @default(autoincrement())
+  firstName   String   @map("first_name")
+  familyName  String   @map("family_name")
+  dateOfBirth DateTime @map("date_of_birth")
+  email       String
+  results     Result[]
+
+  @@index([firstName, familyName])
+  @@map("student")
+}

@@ -1,0 +1,50 @@
+@import "@picocss/pico/scss/pico";
+
+thead {
+  > tr {
+    > th {
+      font-weight: bold;
+    }
+  }
+}
+
+td {
+  &[colspan] {
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 0;
+  }
+}
+
+[role="link"] {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.delete-btn {
+  border: none;
+  background: url(./remove.svg) no-repeat 50% 50%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem 1rem;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  margin: -0.5em;
+  aspect-ratio: 1;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  padding: initial;
+  display: inline-block;
+
+  &:hover {
+    opacity: 1;
+  }
+}

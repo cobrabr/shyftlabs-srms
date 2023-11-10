@@ -1,0 +1,11 @@
+---
+plugins:
+  - prettier-plugin-svelte
+
+arrowParens: "avoid"
+endOfLine: "auto"
+printWidth: 100
+semi: true
+singleQuote: false
+tabWidth: 2
+trailingComma: "all"
